@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;600&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
-    
+    --gradient-intro: linear-gradient(140deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    --primary-text: white;
+    --primary-text-cta: hsl(356, 100%, 66%);
+    --primary-bg-hover-cta: hsl(355, 100%, 74%);
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    color: var(--primary-text);
 }
 
 div {
@@ -20,4 +26,79 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+h1, p {
+    font-family: 'Overpass';
+}
+
+.top-outer {
+    background: var(--gradient-intro);
+    border-radius: 0 0 0 5rem;
+}
+
+.top-inner {
+    background-image: url(../images/bg-pattern-intro.svg);
+    border-radius: 0 0 0 5rem;
+    background-size: 80rem;
+    background-position: -20rem -14rem;
+}
+
+header {
+    padding: 3rem 2rem;
+
+    .logo {
+        img {
+            width: 5rem;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+.section-hero {
+    padding: 4rem 0 9rem 0;
+    text-align: center;
+
+    h1 {
+        font-size: 2.2rem;
+        margin: 0 2rem 1rem 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 0 2rem 3rem 2rem;
+    }
+
+    .container {
+        a {
+            display: inline-block;
+            padding: 0.8rem 0;
+            width: 15ch;
+            border: 1px solid white;
+            border-radius: 10rem;
+            color: var(--primary-text);
+            font-family: 'Ubuntu';
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .cta {
+            background: white;
+            color: var(--primary-text-cta);
+
+            &:hover {
+                background: var(--primary-bg-hover-cta);
+                border-color: var(--primary-bg-hover-cta);
+                color: white;
+            }
+        }
+
+        a + a {
+            margin-left: 0.8rem;
+        }
+    }
 }
