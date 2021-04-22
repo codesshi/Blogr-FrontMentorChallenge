@@ -9,6 +9,7 @@
     --primary-text-light-dark: hsl(208, 49%, 35%);
     --primary-text-medium: hsl(207, 13%, 34%);
     --footer-bg: hsl(240, 10%, 16%);
+    --footer-text: hsl(240, 2%, 79%);
 }
 
 * {
@@ -299,5 +300,11 @@ footer {
 
     .container {
         font-family: 'Ubuntu';
+
+        ul {
+            li {
+                color: var(--footer-text);
+            }
+        }
     }
 }
