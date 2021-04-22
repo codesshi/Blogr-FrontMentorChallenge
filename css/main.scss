@@ -8,6 +8,7 @@
     --primary-text-dark: hsl(208, 49%, 24%);
     --primary-text-light-dark: hsl(208, 49%, 35%);
     --primary-text-medium: hsl(207, 13%, 34%);
+    --footer-bg: hsl(240, 10%, 16%);
 }
 
 * {
@@ -290,4 +291,8 @@ header {
         margin-top: 1rem;
         padding: 0 2rem;
     }
+}
+
+footer {
+    background: var(--footer-bg);
 }
