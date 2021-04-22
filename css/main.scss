@@ -297,6 +297,12 @@ header {
 footer {
     background: var(--footer-bg);
     text-align: center;
+    margin-top: 4rem;
+    padding-bottom: 5rem;
+
+    img {
+        margin: 4.5rem 0 5rem 0;
+    }
 
     .container {
         font-family: 'Ubuntu';
@@ -304,7 +310,16 @@ footer {
         ul {
             li {
                 color: var(--footer-text);
+                margin-top: 0.9rem;
+            }
+
+            li:nth-child(1) {
+                margin-top: 2rem;
             }
         }
+    }
+
+    .container + .container {
+        margin-top: 3rem;
     }
 }
