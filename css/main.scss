@@ -5,6 +5,8 @@
     --primary-text: white;
     --primary-text-cta: hsl(356, 100%, 66%);
     --primary-bg-hover-cta: hsl(355, 100%, 74%);
+    --primary-text-dark: hsl(208, 49%, 24%);
+    --primary-text-light-dark: hsl(208, 49%, 35%);
 }
 
 * {
@@ -46,6 +48,7 @@ h1, p {
 
 header {
     padding: 3rem 2rem;
+    position: relative;
 
     .logo {
         img {
@@ -53,8 +56,103 @@ header {
         }
     }
 
+    .menu-toggle {
+        width: 1.6rem;
+        height: 1.6rem;
+        border: none;
+        float: right;
+        background: url(../images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &.hide {
+            background: url(../images/icon-close.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
     nav {
         display: none;
+        box-sizing: border-box;
+        position: absolute;
+        width: calc(100vw - 4rem);
+        background: white;
+        border-radius: 0.3rem;
+        font-family: 'Overpass';
+        text-align: center;
+        margin-top: 3rem;
+        padding: 2rem;
+        box-shadow: 0 15px 43px #00000042;
+
+        .dropdown {
+            color: var(--primary-text-dark);
+
+            span {
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding-right: 1.1rem;
+                background-image: url(../images/icon-arrow-dark.svg);
+                background-position: right;
+                background-size: 0.6rem;
+                background-repeat: no-repeat;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+
+        .dropdown:focus-within {
+            color: hsl(210, 16%, 45%);
+
+            ul {
+                display: block;
+                background: #efeff1;
+                border-radius: 0.2rem;
+                padding: 1.5rem;
+                margin-top: 1rem;
+                font-size: 0.96rem;
+                font-weight: bold;
+
+                li + li {
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .dropdown + .dropdown {
+            margin-top: 2rem;
+        }
+
+        hr {
+            margin: 1.6rem 0 2rem 0;
+            color: #ffffff61;
+        }
+
+        .secondary {
+            a {
+                color: var(--primary-text-dark);
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+
+            li + li {
+                display: inline-block;
+                margin-top: 1.2rem;
+                padding: 0.8rem 2.5rem;
+                border-radius: 10rem;
+                background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+                
+                a {
+                    font-family: 'Ubuntu';
+                    font-size: 1rem;
+                    color: white;
+                }
+            }
+        }
     }
 }
 
