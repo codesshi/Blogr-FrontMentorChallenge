@@ -296,4 +296,8 @@ header {
 footer {
     background: var(--footer-bg);
     text-align: center;
+
+    .container {
+        font-family: 'Ubuntu';
+    }
 }
