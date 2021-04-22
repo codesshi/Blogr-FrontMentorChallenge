@@ -235,7 +235,7 @@ header {
 }
 
 .section-infra {
-    background: radial-gradient(center -15rem, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
+    background: radial-gradient(circle at center -15rem, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
 
     .container {
         background: url(../images/bg-pattern-circles.svg);
