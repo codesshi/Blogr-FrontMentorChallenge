@@ -270,6 +270,7 @@ header {
 
 .section-features {
     text-align: center;
+    margin-top: 4rem;
 
     img {
         width: 100%;
@@ -278,6 +279,7 @@ header {
     h1 {
         color: var(--primary-text-dark);
         font-size: 1.675rem;
+        margin-top: 2.5rem;
     }
 
     p {
@@ -285,5 +287,7 @@ header {
         font-size: 0.95rem;
         line-height: 170%;
         letter-spacing: 0.04rem;
+        margin-top: 1rem;
+        padding: 0 2rem;
     }
 }
