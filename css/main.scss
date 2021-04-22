@@ -233,3 +233,14 @@ header {
         width: 100%;
     }
 }
+
+.section-infra {
+    background: radial-gradient(center -15rem, hsl(237, 17%, 21%) 50%, hsl(237, 23%, 32%));
+
+    .container {
+        background: url(../images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-size: 37rem;
+        background-position: center -15rem;
+    }
+}
