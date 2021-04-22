@@ -239,12 +239,14 @@ header {
     margin-top: 16.5rem;
     padding-bottom: 8rem;
     text-align: center;
+    border-radius: 0 5rem;
 
     .container {
         background: url(../images/bg-pattern-circles.svg);
         background-repeat: no-repeat;
         background-size: 37rem;
         background-position: center -15rem;
+        border-radius: 0 5rem;
 
         img {
             width: 100%;
