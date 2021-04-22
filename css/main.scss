@@ -7,6 +7,7 @@
     --primary-bg-hover-cta: hsl(355, 100%, 74%);
     --primary-text-dark: hsl(208, 49%, 24%);
     --primary-text-light-dark: hsl(208, 49%, 35%);
+    --primary-text-medium: hsl(207, 13%, 34%);
 }
 
 * {
@@ -199,5 +200,15 @@ header {
         a + a {
             margin-left: 0.8rem;
         }
+    }
+}
+
+.section-editor {
+    h1 {
+        color: var(--primary-text-dark);
+    }
+
+    p {
+        color: var(--primary-text-medium);
     }
 }
