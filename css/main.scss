@@ -326,3 +326,87 @@ footer {
         margin-top: 3rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+
+        .menu-toggle {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            position: relative;
+            width: auto;
+            margin: 0 0 0 3rem;
+            padding: 0;
+            background: none;
+            box-shadow: none;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: space-between;
+
+            .primary {
+                display: flex;
+
+                .dropdown {
+                    margin: 0;
+                    color: white;
+                    
+                    span {
+                        font-family: 'Ubuntu';
+                        font-size: 0.95rem;
+                        font-weight: normal;
+                        padding-left: 1rem;
+                    }
+
+                    ul {
+                        position: absolute;
+                        background: white;
+                        color: #333;
+                        text-align: left;
+                        padding: 1rem;
+                        font-family: 'Ubuntu';
+                        font-size: 0.85rem;
+                        font-weight: normal;
+
+                        li:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            hr {
+                display: none;
+            }
+
+            .secondary {
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        color: white;
+                        font-family: 'Ubuntu';
+                        font-size: 0.95rem;
+                        font-weight: normal;
+                    }
+
+                    li + li {
+                        margin: 0 0 0 1.5rem;
+                        background: white;
+
+                        a {
+                            color: var(--primary-text-cta);
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
