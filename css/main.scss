@@ -416,6 +416,42 @@ footer {
         }
     }
 
+    .section-editor {
+        text-align: left;
+
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 8rem 0 3rem 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 2rem 3rem;
+
+            .features {
+                order: 1;
+                width: 60%;
+
+                h2, p {
+                    padding: 0;
+                }
+
+                h2:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+
+            img {
+                order: 2;
+                position: absolute;
+                right: -14rem;
+                width: 32rem;
+            }
+        }
+    }
+
     footer {
         display: flex;
         padding: 5rem 4rem;
