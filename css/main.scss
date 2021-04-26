@@ -451,6 +451,36 @@ footer {
             }
         }
     }
+    
+    .section-infra {
+        margin-top: 6rem;
+        padding: 0;
+
+        .container {
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 5rem 3rem;
+            background-position: left -13rem bottom;
+
+            img {
+                position: absolute;
+                left: 1rem;
+                width: 37%;
+                margin: 0;
+            }
+
+            .right-side {
+                width: 60%;
+                text-align: left;
+
+                p {
+                    padding: 0;
+                }
+            }
+        }
+    }
 
     .section-features {
         text-align: left;
