@@ -73,7 +73,10 @@
   <section class="section-editor">
     <h1>Designed for the future</h1>
     <div class="container">
-      <img src="/images/illustration-editor-mobile.svg" alt="">
+      <picture>
+        <source srcset="/images/illustration-editor-desktop.svg" media="(min-width: 1024px)">
+        <img src="/images/illustration-editor-mobile.svg" alt="">
+      </picture>
       <div class="features">
         <h2>Introducing an extensible editor</h2>
         <p>
@@ -91,20 +94,25 @@
     </div>
   </section>
   <section class="section-infra">
-    <div class="container">
-      <img src="/images/illustration-phones.svg" alt="">
-      <div class="right-side">
-        <h1>State of the Art Infrastructure</h1>
-        <p>
-          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-        </p>
+    <div class="bg-image">
+      <div class="container">
+        <img src="/images/illustration-phones.svg" alt="">
+        <div class="right-side">
+          <h1>State of the Art Infrastructure</h1>
+          <p>
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
       </div>
     </div>
   </section>
   <section class="section-features">
     <div class="container">
-      <img src="/images/illustration-laptop-mobile.svg" alt="">
+      <picture>
+        <source srcset="/images/illustration-laptop-desktop.svg" media="(min-width: 1024px)">
+        <img src="/images/illustration-laptop-mobile.svg" alt="">
+      </picture>
       <div class="features">
         <h2>Free, open, simple</h2>
         <p>
@@ -121,36 +129,38 @@
     </div>
   </section>
   <footer>
-    <img src="/images/logo.svg" alt="">
-    <nav>
-      <div class="container">
-        Product
-        <ul>
-          <li>Overview</li>
-          <li>Pricing</li>
-          <li>Marketplace</li>
-          <li>Features</li>
-          <li>Integrations</li>
-        </ul>
-      </div>
-      <div class="container">
-        Company
-        <ul>
-          <li>About</li>
-          <li>Team</li>
-          <li>Blog</li>
-          <li>Careers</li>
-        </ul>
-      </div>
-      <div class="container">
-        Connect
-        <ul>
-          <li>Contact</li>
-          <li>Newsletter</li>
-          <li>LinkedIn</li>
-        </ul>
-      </div>
-    </nav>
+    <div class="container">
+      <img src="/images/logo.svg" alt="">
+      <nav>
+        <div class="group">
+          Product
+          <ul>
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Marketplace</li>
+            <li>Features</li>
+            <li>Integrations</li>
+          </ul>
+        </div>
+        <div class="group">
+          Company
+          <ul>
+            <li>About</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="group">
+          Connect
+          <ul>
+            <li>Contact</li>
+            <li>Newsletter</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
