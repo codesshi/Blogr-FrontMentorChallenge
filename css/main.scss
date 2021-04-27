@@ -99,12 +99,18 @@ header {
             span {
                 font-size: 1.1rem;
                 font-weight: bold;
-                padding-right: 1.1rem;
-                background-image: url(../images/icon-arrow-dark.svg);
-                background-position: right;
-                background-size: 0.6rem;
-                background-repeat: no-repeat;
                 cursor: pointer;
+            }
+
+            span::after {
+                content: "";
+                display: inline-block;
+                background-image: url(../images/icon-arrow-dark.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 10px;
+                height: 9px;
+                margin-left: 0.4rem;
             }
 
             ul {
@@ -114,6 +120,10 @@ header {
 
         .dropdown:focus-within {
             color: hsl(210, 16%, 45%);
+
+            span::after {
+                rotate: 180deg;
+            }
 
             ul {
                 display: block;
@@ -369,6 +379,10 @@ footer {
                         padding-left: 1rem;
                     }
 
+                    span::after {
+                        background-image: url(../images/icon-arrow-light.svg);
+                    }
+
                     ul {
                         position: absolute;
                         background: white;
@@ -383,6 +397,10 @@ footer {
                             font-weight: bold;
                         }
                     }
+                }
+
+                .dropdown + .dropdown {
+                    margin-left: 0.5rem;
                 }
             }
 
