@@ -379,6 +379,7 @@ footer {
                 .dropdown {
                     margin: 0;
                     color: white;
+                    position: relative;
                     
                     span {
                         font-family: 'Ubuntu';
@@ -400,6 +401,8 @@ footer {
                         font-family: 'Ubuntu';
                         font-size: 0.85rem;
                         font-weight: normal;
+                        min-width: 100%;
+                        box-sizing: border-box;
 
                         li:hover {
                             font-weight: bold;
