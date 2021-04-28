@@ -4,12 +4,12 @@ let menuAction = "show";
 
 menuToggle.addEventListener('click', (e) => {
     if (menuAction === "show") {
-        nav.style.display = "block";
+        nav.classList.add("block");
         menuToggle.classList.add("hide");
         menuAction = "hide";
     }
     else {
-        nav.style.display = "none";
+        nav.classList.remove("block");
         menuToggle.classList.remove("hide");
         menuAction = "show";
     }

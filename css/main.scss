@@ -80,6 +80,10 @@ header {
         }
     }
 
+    .block {
+        display: block;
+    }
+
     nav {
         display: none;
         box-sizing: border-box;
@@ -351,6 +355,10 @@ footer {
 
         .menu-toggle {
             display: none;
+        }
+
+        .block {
+            display: flex;
         }
 
         nav {
