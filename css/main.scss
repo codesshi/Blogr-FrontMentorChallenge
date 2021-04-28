@@ -348,6 +348,11 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+    .top-inner {
+        background-size: clamp(1rem, 220%, 198rem);
+        background-position: 27% 52%;
+    }
+
     header {
         display: flex;
         align-items: center;
