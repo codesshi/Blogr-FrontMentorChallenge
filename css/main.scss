@@ -611,6 +611,14 @@ footer {
                 width: 6rem;
             }
         }
+
+        nav {
+            .primary {
+                .dropdown + .dropdown {
+                    margin-left: 1rem;
+                }
+            }
+        }
     }
 
     .section-hero {
