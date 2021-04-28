@@ -250,7 +250,7 @@ header {
     }
 
     img {
-        width: 100%;
+        width: clamp(1rem, 100%, 30rem);
     }
 }
 
@@ -272,7 +272,7 @@ header {
     .container {
 
         img {
-            width: 100%;
+            width: clamp(1rem, 100%, 30rem);
             margin-top: -11.5rem;
         }
 
@@ -296,7 +296,7 @@ header {
     margin-top: 4rem;
 
     img {
-        width: 100%;
+        width: clamp(1rem, 100%, 36rem);
     }
 
     h2 {
@@ -495,6 +495,10 @@ footer {
                 position: absolute;
                 right: -14rem;
                 width: 64%;
+
+                img {
+                    width: 100%;
+                } 
             }
         }
     }
@@ -712,7 +716,7 @@ footer {
     header {
 
         .logo {
-            
+
             img {
                 width: 6.5rem;
             }
