@@ -163,14 +163,15 @@ header {
             li + li {
                 display: inline-block;
                 margin-top: 1.2rem;
-                padding: 0.8rem 2.5rem;
                 border-radius: 10rem;
                 background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
                 
                 a {
+                    display: inline-block;
                     font-family: 'Ubuntu';
                     font-size: 1rem;
                     color: white;
+                    padding: 0.8rem 2.5rem;
                 }
             }
         }
