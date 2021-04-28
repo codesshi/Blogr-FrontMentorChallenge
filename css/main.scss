@@ -604,6 +604,15 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+    header {
+        .logo {
+
+            img {
+                width: 6rem;
+            }
+        }
+    }
+
     .section-hero {
 
         h1 {
