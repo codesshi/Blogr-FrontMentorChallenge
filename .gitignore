@@ -16,5 +16,5 @@
 .prettierignore
 
 # Ignores CSS files compiled form SCSS files
-*.css
-*.css.map
+#*.css
+#*.css.map
