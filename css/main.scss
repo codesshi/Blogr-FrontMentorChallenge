@@ -138,6 +138,10 @@ header {
                 font-size: 0.96rem;
                 font-weight: bold;
 
+                a {
+                    color: hsl(210, 16%, 45%);
+                }
+
                 li + li {
                     margin-top: 1rem;
                 }
@@ -332,8 +336,11 @@ footer {
 
         ul {
             li {
-                color: var(--footer-text);
                 margin-top: 0.9rem;
+
+                a {
+                    color: var(--footer-text);
+                }
             }
 
             li:nth-child(1) {
@@ -401,7 +408,6 @@ footer {
                     ul {
                         position: absolute;
                         background: white;
-                        color: #333;
                         text-align: left;
                         padding: 1rem;
                         font-family: 'Ubuntu';
@@ -410,6 +416,10 @@ footer {
                         min-width: 100%;
                         box-sizing: border-box;
                         box-shadow: 0 15px 43px #00000042;
+
+                        a {
+                            color: #333;
+                        }
 
                         li:hover {
                             font-weight: bold;
