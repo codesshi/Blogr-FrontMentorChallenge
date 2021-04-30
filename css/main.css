@@ -143,6 +143,10 @@ header nav .dropdown:focus-within ul {
   font-weight: bold;
 }
 
+header nav .dropdown:focus-within ul a {
+  color: #607385;
+}
+
 header nav .dropdown:focus-within ul li + li {
   margin-top: 1rem;
 }
@@ -328,8 +332,11 @@ footer .group {
 }
 
 footer .group ul li {
-  color: var(--footer-text);
   margin-top: 0.9rem;
+}
+
+footer .group ul li a {
+  color: var(--footer-text);
 }
 
 footer .group ul li:nth-child(1) {
@@ -406,7 +413,6 @@ footer .group + .group {
   header nav .primary .dropdown ul {
     position: absolute;
     background: white;
-    color: #333;
     text-align: left;
     padding: 1rem;
     font-family: 'Ubuntu';
@@ -417,6 +423,9 @@ footer .group + .group {
             box-sizing: border-box;
     -webkit-box-shadow: 0 15px 43px #00000042;
             box-shadow: 0 15px 43px #00000042;
+  }
+  header nav .primary .dropdown ul a {
+    color: #333;
   }
   header nav .primary .dropdown ul li:hover {
     font-weight: bold;
