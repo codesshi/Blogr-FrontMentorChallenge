@@ -61,34 +61,94 @@ header .logo img {
   width: 5rem;
 }
 
-header .menu-toggle {
-  width: 1.6rem;
-  height: 1.6rem;
-  border: none;
-  float: right;
-  background: url(../images/icon-hamburger.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+header .toggle-open, header .toggle-close {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 
-header .menu-toggle.hide {
-  background: url(../images/icon-close.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+header .toggle-close {
+  display: none;
 }
 
-header .block {
+header svg #top {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+header svg #bottom {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+header svg #top, header svg #bottom {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+header svg #center {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+header .menu-container:focus-within nav {
+  max-height: 600px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: max-height 0.3s step-start, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: max-height 0.3s step-start, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: max-height 0.3s step-start, transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: max-height 0.3s step-start, transform 0.3s ease-out, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+header .menu-container:focus-within svg #top {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .menu-container:focus-within svg #bottom {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header .menu-container:focus-within svg #center {
+  opacity: 0;
+}
+
+header .menu-container:focus-within svg #top, header .menu-container:focus-within svg #bottom {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+header .menu-container:focus-within svg #center {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+header .menu-container:focus-within + .toggle-close {
   display: block;
 }
 
 header nav {
-  display: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  width: calc(100vw - 4rem);
+  width: calc(100% - 4rem);
   background: white;
   border-radius: 0.3rem;
   font-family: 'Overpass';
@@ -97,6 +157,15 @@ header nav {
   padding: 2rem;
   -webkit-box-shadow: 0 15px 43px #00000042;
           box-shadow: 0 15px 43px #00000042;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  opacity: 0;
+  -webkit-transition: max-height 0.3s step-end, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: max-height 0.3s step-end, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: max-height 0.3s step-end, transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: max-height 0.3s step-end, transform 0.3s ease-out, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 header nav .dropdown {
@@ -122,6 +191,16 @@ header nav .dropdown span::after {
 
 header nav .dropdown ul {
   display: none;
+  background: #efeff1;
+  border-radius: 0.2rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.96rem;
+  font-weight: bold;
+}
+
+header nav .dropdown ul li + li {
+  margin-top: 1rem;
 }
 
 header nav .dropdown:focus-within {
@@ -135,20 +214,10 @@ header nav .dropdown:focus-within span::after {
 
 header nav .dropdown:focus-within ul {
   display: block;
-  background: #efeff1;
-  border-radius: 0.2rem;
-  padding: 1.5rem;
-  margin-top: 1rem;
-  font-size: 0.96rem;
-  font-weight: bold;
 }
 
 header nav .dropdown:focus-within ul a {
   color: #607385;
-}
-
-header nav .dropdown:focus-within ul li + li {
-  margin-top: 1rem;
 }
 
 header nav .dropdown + .dropdown {
@@ -362,13 +431,20 @@ footer .group + .group {
     max-width: 1100px;
     margin: 0 auto;
   }
-  header .menu-toggle {
+  header .menu-container {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  header .menu-container:focus-within nav {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  header .menu-container:focus-within + .toggle-close {
     display: none;
   }
-  header .block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  header .toggle-open {
+    display: none;
   }
   header nav {
     display: -webkit-box;
@@ -376,6 +452,11 @@ footer .group + .group {
     display: flex;
     position: relative;
     width: auto;
+    max-height: inherit;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    overflow: inherit;
     margin: 0 0 0 3rem;
     padding: 0;
     background: none;
@@ -411,6 +492,7 @@ footer .group + .group {
     background-image: url(../images/icon-arrow-light.svg);
   }
   header nav .primary .dropdown ul {
+    display: block;
     position: absolute;
     background: white;
     text-align: left;
@@ -423,12 +505,30 @@ footer .group + .group {
             box-sizing: border-box;
     -webkit-box-shadow: 0 15px 43px #00000042;
             box-shadow: 0 15px 43px #00000042;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transition: max-height 0.3s step-end, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    transition: max-height 0.3s step-end, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    transition: max-height 0.3s step-end, opacity 0.3s ease-out, transform 0.3s ease-out;
+    transition: max-height 0.3s step-end, opacity 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   }
   header nav .primary .dropdown ul a {
     color: #333;
   }
   header nav .primary .dropdown ul li:hover {
     font-weight: bold;
+  }
+  header nav .primary .dropdown:focus-within ul {
+    max-height: 1000px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: max-height 0.3s step-start, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    transition: max-height 0.3s step-start, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    transition: max-height 0.3s step-start, opacity 0.3s ease-out, transform 0.3s ease-out;
+    transition: max-height 0.3s step-start, opacity 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   }
   header nav .primary .dropdown + .dropdown {
     margin-left: 0.5rem;
