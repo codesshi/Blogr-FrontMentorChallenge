@@ -102,7 +102,7 @@ header {
 
         nav {
             max-height: 600px;
-            transform: translateY(-15px);
+            transform: translateY(0px);
             opacity: 1;
             transition: max-height $duration step-start, transform $duration $easeFuntion, opacity $duration $easeFuntion;
         }
