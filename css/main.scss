@@ -176,6 +176,16 @@ header {
 
             ul {
                 display: none;
+                background: #efeff1;
+                border-radius: 0.2rem;
+                padding: 1.5rem;
+                margin-top: 1rem;
+                font-size: 0.96rem;
+                font-weight: bold;
+
+                li + li {
+                    margin-top: 1rem;
+                }
             }
         }
 
@@ -188,19 +198,9 @@ header {
 
             ul {
                 display: block;
-                background: #efeff1;
-                border-radius: 0.2rem;
-                padding: 1.5rem;
-                margin-top: 1rem;
-                font-size: 0.96rem;
-                font-weight: bold;
 
                 a {
                     color: hsl(210, 16%, 45%);
-                }
-
-                li + li {
-                    margin-top: 1rem;
                 }
             }
         }
@@ -475,6 +475,7 @@ footer {
                     }
 
                     ul {
+                        display: block;
                         position: absolute;
                         background: white;
                         text-align: left;
@@ -485,6 +486,10 @@ footer {
                         min-width: 100%;
                         box-sizing: border-box;
                         box-shadow: 0 15px 43px #00000042;
+                        max-height: 0;
+                        opacity: 0;
+                        transform: translateY(-10px);
+                        transition: max-height $duration step-end, opacity $duration $easeFuntion, transform $duration $easeFuntion;
 
                         a {
                             color: #333;
@@ -493,6 +498,16 @@ footer {
                         li:hover {
                             font-weight: bold;
                         }
+                    }
+                }
+
+                .dropdown:focus-within {
+                    
+                    ul {
+                        max-height: 1000px;
+                        opacity: 1;
+                        transform: translateY(0px);
+                        transition: max-height $duration step-start, opacity $duration $easeFuntion, transform $duration $easeFuntion;
                     }
                 }
 
